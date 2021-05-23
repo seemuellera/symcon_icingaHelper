@@ -3,9 +3,9 @@
 // Klassendefinition
 class IcingaHelper extends IPSModule {
 	
-	$colors = Array();
-	$serviceStates = Array();
- 
+	protected $colors;
+	protected $serviceStates;
+	
 	// Der Konstruktor des Moduls
 	// Überschreibt den Standard Kontruktor von IPS
 	public function __construct($InstanceID) {
@@ -13,11 +13,13 @@ class IcingaHelper extends IPSModule {
 		parent::__construct($InstanceID);
 
 		// Selbsterstellter Code
+		$this->colors = Array();
 		$this->colors['OK']     = '#00ff00';
 		$this->colors['WARN']   = '#ffff00';
 		$this->colors['CRIT']   = '#ff0000';
 		$this->colors['UNKNOWN'] = '#ff00ff';
 		
+		$this->serviceStates = Array();
 		$this->serviceStates[0] = 'OK';
 		$this->serviceStates[1] = 'WARN';
 		$this->serviceStates[2] = 'CRIT';
