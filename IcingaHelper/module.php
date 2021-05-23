@@ -166,8 +166,17 @@ class IcingaHelper extends IPSModule {
 		
 		$serviceStateNum = $serviceDetails['state'];
 		$serviceState = $this->serviceStates[$serviceStateNum];
+		
+		if ($serviceStateNum == 0) {
+			
+			SetValue($this->GetIDForIdent("Result"), false);
+		}
+		else {
+			
+			SetValue($this->GetIDForIdent("Result"), true);
+		}
+		
 		$lastCheckOutput = $serviceDetails['last_check_result']['output'];
-	
 		$this->UpdateResult($serviceState, $lastCheckOutput);
 		return;
 	}
