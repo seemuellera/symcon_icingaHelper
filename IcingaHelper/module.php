@@ -148,7 +148,7 @@ class IcingaHelper extends IPSModule {
 	
 	protected function Check() {
 		
-		$checkResultsJson = Icinga2_Query4Service($this->GetIDForIdent("IcingaInstance"),$this->ReadPropertyString("ServiceName"),$this->ReadPropertyString("HostName") );
+		$checkResultsJson = Icinga2_Query4Service($this->ReadPropertyInteger("IcingaInstance"),$this->ReadPropertyString("ServiceName"),$this->ReadPropertyString("HostName") );
 		$checkResults = json_decode($checkResultsJson, true);
 		
 		$serviceDetails = $checkResults[0]['attrs'];
