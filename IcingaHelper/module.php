@@ -140,6 +140,10 @@ class IcingaHelper extends IPSModule {
 					SetValue($this->GetIDForIdent("Result"), true);
 					SetValue($this->GetIDForIdent("ResultDetails"), "");
 				}
+				else {
+					
+					$this->Check();
+				}
 				break;
 			default:
 				throw new Exception("Invalid Ident");
