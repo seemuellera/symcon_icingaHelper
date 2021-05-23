@@ -1,0 +1,14 @@
+{
+  "id": "{067949D3-0BD8-4D6E-902F-7DEF2AF7E9EE}",
+  "name": "IcingaHelper",
+  "type": 3,
+  "vendor": "Andreas",
+  "aliases": 
+  [
+	  "IcingaHelper"
+  ],
+  "parentRequirements": [],
+  "childRequirements": [],
+  "implemented": [],
+  "prefix": "ICINGAHELPER"
+}
